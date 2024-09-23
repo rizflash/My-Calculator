@@ -1,2 +1,0 @@
-# My-Calculator
-calculator kereennn
