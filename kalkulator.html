@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - riz</title>
+    <link rel="stylesheet" href="kalkulator.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="calculator bg-blue-300 p-4 rounded-lg shadow-lg">
+        <h2 class="text-center text-2xl font-bold text-white mb-4">My Calculator</h2>
+        <input type="text" id="display" class="w-full bg-blue-400 text-right text-2xl text-white font-bold py-4 rounded shadow mb-2" disabled>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="col-span-1 bg-red-300 text-white text-2xl font-bold py-4 rounded shadow" onclick="clearDisplay()">C</button>
+            <button class="col-span-3 bg-green-400 text-2xl text-white font-bold py-4 rounded shadow flex items-center justify-center" id="resultText" disabled></button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('7')">7</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('8')">8</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('9')">9</button>
+            <button class="bg-yellow-200 text-2xl font-bold py-4 rounded shadow" onclick="backspace()">←</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('4')">4</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('5')">5</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('6')">6</button>
+            <button class="bg-pink-200 text-2xl font-bold py-4 rounded shadow" onclick="appendOperator('-')">-</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('1')">1</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('2')">2</button>
+            <button class="bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('3')">3</button>
+            <button class="bg-pink-200 text-2xl font-bold py-4 rounded shadow" onclick="appendOperator('+')">+</button>
+            <button class="col-span-2 bg-white text-2xl font-bold py-4 rounded shadow" onclick="appendNumber('0')">0</button>
+            <button class="bg-pink-200 text-2xl font-bold py-4 rounded shadow" onclick="appendNumber(':')">:</button>
+            <button class="bg-pink-200 text-2xl font-bold py-4 rounded shadow" onclick="appendOperator('*')">x</button>
+            <button class="bg-yellow-200 text-2xl font-bold py-4 rounded shadow" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="kalkulator.js"></script>
+</body>
+</html>
